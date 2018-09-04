@@ -1,0 +1,2 @@
+class CountdownsController < ApplicationController
+end
