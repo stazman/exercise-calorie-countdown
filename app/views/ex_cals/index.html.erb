@@ -11,4 +11,9 @@
 <%# <%= @total_calories_per_day_left %>
 
 
-
+<h3>All entries</h3>
+<% @ex_cals.each do |ec| %>
+    <ol>
+        <li><%= ec.created_at %> - <%= ec.calories_burned %> - <%= ec.notes %></li><br><br><br>
+    </ol>
+<% end %>
