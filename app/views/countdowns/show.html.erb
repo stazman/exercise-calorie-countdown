@@ -1,8 +1,17 @@
 <h2>The Results</h2>
 
+<%# <%= @countdown.total_burned %>
+
 <p>Date: <%= @countdown.created_at %></p><br>
 
-<p>Calories Burned: @countdown.ex_cal</p>
+<% @countdown.ex_cals.all.each do |calories_burned| %>
+<p>Calories Burned: 
+<ul>
+    <li><%= calories_burned.calories_burned %></li></p><br>
+</ul>
+<% end %>
+<%= link_to "Make a New Entry", root_url %><br>
+
 
 <p>Notes: <%= @countdown.notes %></p>
 

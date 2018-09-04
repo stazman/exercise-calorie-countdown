@@ -1,7 +1,8 @@
 class ExCalsController < ApplicationController
     def index
-        @countdown = Countdown.find_by(id: params[:countdown_id])
-        @ex_cals = @countdown.ex_cals
+        @ex_cals = ExCal.all
+        # @countdown = Countdown.find_by(id: params[:countdown_id])
+        # @ex_cals = @countdown.ex_cals
     end
     
     def show

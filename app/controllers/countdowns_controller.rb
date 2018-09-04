@@ -1,6 +1,16 @@
 class CountdownsController < ApplicationController
+    
+    
+    # def total_burned
+
+    # end
+
     def index
-        @countdown = Countdown.all
+        @countdowns = Countdown.all
+        @ex_cals = ExCal.all
+        # @countdown_sum = @countdowns.total_burned
+        # countdown_ex_cals = ExCal.find_by(id: :countdown_id)
+        # @countdown.ex_cals = @countdown.countdown_ex_cals
     end
         
     def new
@@ -10,11 +20,13 @@ class CountdownsController < ApplicationController
     def create
         @countdown = Countdown.new(countdown_params)
         @countdown.save
-        redirect_to ex_cal_path(@countdown)
+        # redirect_to ex_cal_path(@countdown)
+        redirect_to @countdown
     end
 
     def show
         @countdown = Countdown.find(params[:id])
+        # @countdown_ex_cals = ExCal.where(:countdown_id = @countdown.id)
     end
 
     def destroy

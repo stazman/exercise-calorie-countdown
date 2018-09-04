@@ -19,4 +19,9 @@ class Countdown < ApplicationRecord
         self.ex_cals << ex_cal  
         end 
     end
+
+    def self.total_burned
+        all.sum
+    end
+
 end
