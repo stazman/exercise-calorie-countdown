@@ -3,15 +3,15 @@
 <h3><%= f.label "Today's Date: " %><% Date.today %></h3><br>
 <h3><%= f.label "Calories Burned" %></h3><br>
 
-<%= f.collection_check_boxes(:ex_cals, ExCal.all, :id, :calories) do |b| %><br>
-     <%=   b.label { b.check_box }%>
+<%= f.collection_check_boxes :ex_cal_ids, ExCal.all, :id, :calories_burned %><br>
 
 
-      <%= f.fields_for :ex_cals, @countdown.ex_cals do |ex_cal_fields|%><br>
+      <%= f.fields_for :ex_cals, @countdown.ex_cals.build do |ex_cal_fields|%><br>
             <%= ex_cal_fields.text_field :calories_burned %><br><br>
 <%# <h3><%= f.fields_for @ex_cal do  %></h3>
-<%# <h3><%= f.calories_burned %></h3> %>
+<%# <h3><%= f.calories_burned %>
+
 <% end %>
-<h3><%= f.submit "Submit" %></h3> %>
+<h3><%= f.submit "Submit" %></h3>
 <% end %>
 

@@ -26,6 +26,6 @@ class CountdownsController < ApplicationController
     private
 
     def countdown_params
-        params.require(:countdown).permit(:)
+        params.require(:countdown).permit(:date, ex_cal_ids: [], ex_cals_attributes: [:calories_burned])
     end
 end
