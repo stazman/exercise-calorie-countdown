@@ -10,7 +10,7 @@ class CountdownsController < ApplicationController
     def create
         @countdown = Countdown.new(countdown_params)
         @countdown.save
-        redirect_to @countdown
+        redirect_to ex_cal_path(@countdown)
     end
 
     def show
