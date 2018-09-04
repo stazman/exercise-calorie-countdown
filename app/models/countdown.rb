@@ -1,5 +1,6 @@
 class Countdown < ApplicationRecord
-    has_many :ex_cals
+    has_many :countdown_ex_cals
+    has_many has_many :ex_cals, through: :countdown_ex_cals
     accepts_nested_attributes_for :ex_cals
 
     # def lit_fan_author_name
