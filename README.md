@@ -1,5 +1,9 @@
 # README
 
+
+all notes method lets you see the key of exercises for calories burned amounts
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

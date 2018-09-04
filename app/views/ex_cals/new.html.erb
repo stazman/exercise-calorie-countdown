@@ -1,0 +1,9 @@
+<h2>Make an entry</h2>
+
+<%= form_for @ex_cal do |f| %>
+<%= f.collection_boxes :ex_cals, ExCals.all, :id, :calories_burned %>
+<%= f.label "Calories Burned" %><br><br>
+<%= f.text_field :calories_burned %>
+<%= f.label "Notes" %><br><br>
+<%= f.text_area :notes %><br><br>
+<%= f.submit %>
