@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   root 'static#home'
 
   resources :countdowns
+  resources :ex_cals
 
+  resources :countdowns do
+    resources :ex_cals, only: [:index, :show]
+  end
 end
