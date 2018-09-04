@@ -1,0 +1,7 @@
+<h2>Countdown History</h2>
+<% Countdown.all.each do |c| %>
+    <ol>
+        <h3><li><%= c.date %> - <%= c.calories_burned %></li></h3>
+    </ol>
+<% end %>
+

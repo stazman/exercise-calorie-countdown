@@ -1,0 +1,17 @@
+<h2>Make a new entry</h2>
+<%= form_for @countdown do |f| %>
+<h3><%= f.label "Today's Date: " %><% Date.today %></h3><br>
+<h3><%= f.label "Calories Burned" %></h3><br>
+
+<%= f.collection_check_boxes(:ex_cals, ExCal.all, :id, :calories) do |b| %><br>
+     <%=   b.label { b.check_box }%>
+
+
+      <%= f.fields_for :ex_cals, @countdown.ex_cals do |ex_cal_fields|%><br>
+            <%= ex_cal_fields.text_field :calories_burned %><br><br>
+<%# <h3><%= f.fields_for @ex_cal do  %></h3>
+<%# <h3><%= f.calories_burned %></h3> %>
+<% end %>
+<h3><%= f.submit "Submit" %></h3> %>
+<% end %>
+
