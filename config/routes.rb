@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'countdowns#index'
+  root 'ex_cals#index'
 
-  resources :countdowns
+  # resources :countdowns
   resources :ex_cals
 
   # resources :countdowns do
