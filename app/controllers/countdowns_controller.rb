@@ -7,7 +7,7 @@ class CountdownsController < ApplicationController
 
     def index
         @countdowns = Countdown.all
-        @ex_cals = ExCal.all
+        # @ex_cals = ExCal.all
         # @countdown_sum = @countdowns.total_burned
         # countdown_ex_cals = ExCal.find_by(id: :countdown_id)
         # @countdown.ex_cals = @countdown.countdown_ex_cals
@@ -38,6 +38,6 @@ class CountdownsController < ApplicationController
     private
 
     def countdown_params
-        params.require(:countdown).permit(:notes, ex_cal_ids: [], ex_cals_attributes: [:calories_burned])
+        params.require(:countdown).permit(:notes, :created_at)
     end
 end
