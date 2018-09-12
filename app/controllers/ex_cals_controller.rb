@@ -5,8 +5,7 @@ class ExCalsController < ApplicationController
         @total_calories_burned = ExCal.total_calories_burned
         @total_calories_left = ExCal.total_calories_left(@total_calories_burned)
         @total_days_left = ExCal.total_days_left
-        # @current_date = Date.new
-        # @
+        @total_calories_left_per_day = @total_calories_left / @total_days_left.to_i
     end
 
     def new

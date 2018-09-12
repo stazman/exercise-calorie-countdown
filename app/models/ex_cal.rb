@@ -15,4 +15,8 @@ class ExCal < ApplicationRecord
         a = Date.parse("25/9/2027") - Date.current
         a.to_s.chomp("/1")
     end
+
+    # def self.total_calories_left_per_day
+    #     self.total_days_left.to_i / self.total_calories_left.to_s.to_i
+    # end 
 end
