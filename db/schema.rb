@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_134613) do
-
-  create_table "countdowns", force: :cascade do |t|
-    t.string "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_09_02_174239) do
 
   create_table "ex_cals", force: :cascade do |t|
     t.integer "calories_burned"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "notes"
   end
 
 end

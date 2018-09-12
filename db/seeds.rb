@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ex_cal1 = ExCal.create(calories_burned: "333", notes: "First workout")
+ex_cal1 = ExCal.create(calories_burned: "0", notes: "First workout")
 # twentyminwalk = ExCal.create!(calories_burned: "333")
 # workouta = ExCal.create!(calories_burned: "363")
 # workoutb = ExCal.create!(calories_burned: "182")
