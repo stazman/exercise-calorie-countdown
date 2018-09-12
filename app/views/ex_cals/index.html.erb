@@ -1,8 +1,10 @@
 <h1>Exercise Calorie Countdown</h1>
 
-<%# <%= @total_calories_left %><br><br> %>
+<p>Total Calories Left: <%= @total_calories_left %></p><br><br>
 
 <p>Total Calories Burned: <%= @total_calories_burned %></p><br>
+
+<h3><%= link_to "New Daily Entry for Today", new_ex_cal_path %></h3>
 
 <%# <%= @total_days_left %> %>
 

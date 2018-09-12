@@ -1,2 +1,2 @@
 class Countdown < ApplicationRecord
-rend
+end
