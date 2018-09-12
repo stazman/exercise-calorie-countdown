@@ -14,4 +14,6 @@
  *= require_self
  */
 
- @import ‘bootstrap’;
+/* //  Use this when have a bootstrap file to import:
+first, make application.css into application.scss
+//  @import 'bootstrap'; */

@@ -1,4 +1,6 @@
 class ExCalsController < ApplicationController
+    layout "standard"
+    
     def index
         @ex_cals = ExCal.all
 

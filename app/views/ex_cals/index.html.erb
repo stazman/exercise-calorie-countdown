@@ -1,24 +1,22 @@
-<h1>Exercise Calorie Countdown</h1>
+<p>Total Calories Left</p> 
+<p><%= number_with_delimiter(@total_calories_left, :delimiter => ',') %></p><br>
 
-<p>Total Calories Left: <%= @total_calories_left %></p><br><br>
+<p>Total Calories Burned</p> 
+<p><%= number_with_delimiter(@total_calories_burned, :delimiter => ',') %></p><br>
 
-<p>Total Calories Burned: <%= @total_calories_burned %></p><br>
+<p>Total Days Left</p>
+<p><%= number_with_delimiter(@total_days_left, :delimiter => ',') %></p><br>
 
-<p>Total Days Left: <%= @total_days_left %></p><br>
-
-<p>Total Calories Left Per Day: <%= @total_calories_left_per_day %></p><br>
+<p>Total Calories Left Per Day</p> 
+<p><%= number_with_delimiter(@total_calories_left_per_day, :delimiter => ',') %></p><br>
 <%# <%= @total_calories_per_day_left %>
 <%# <%= @total_calories_per_day_burned %>
 
-
-<h3><%= link_to "New Daily Entry for Today", new_ex_cal_path %></h3>
-
-
-
+<h4><%= link_to "New Entry", new_ex_cal_path %></h4><br>
 
 <h3>All entries</h3>
-<% @ex_cals.each do |ec| %>
     <ol>
-        <li><%= ec.created_at %> - <%= ec.calories_burned %> - <%= ec.notes %></li><br><br><br>
-    </ol>
+<% @ex_cals.each do |ec| %>
+        <li><%= ec.created_at %> - <%= ec.calories_burned %> - <%= ec.notes %></li><br>
 <% end %>
+    </ol>
