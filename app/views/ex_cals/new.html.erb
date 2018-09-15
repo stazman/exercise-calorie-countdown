@@ -1,7 +1,14 @@
 <h2>Make an entry</h2>
 
 <%= form_for @ex_cal do |f| %>
-<%= f.collection_select :itself, ExCal.all.sort { |x,y| y <=> x }, :id, :calories_burned %>
+<%= f.select([:calories_burned]) %>
+<%# # , grouped_options_for_select("333"))  %>
+<%# grouped_options_for_select [['Fruits',  @fruits.collect {|v| [ v.name, v.id ] }],
+                            ['Veggies', @veggies.collect {|v| [ v.name, v.id ] }],
+                            ['Junk',    @junk_food.collect {|v| [ v.name, v.id ] }]]f.select :food_attribute, grouped_options_for_select(...) %>
+<%# ["North America",[["United States","US"],["Canada","CA"]]] %>
+<%# <%= f.options_for_select([["calories_burned", "333"], ["calories_burned", "363"]]) %> %>
+<%# <%= f.collection_select :itself, ExCal.all.sort { |x,y| y <=> x }, :id, :calories_burned %> %>
 <%= f.label "Calories Burned" %><br><br>
 <%= f.text_field :calories_burned %><br><br>
 <%= f.label "Notes" %><br><br>
