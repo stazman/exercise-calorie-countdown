@@ -1,7 +1,13 @@
 <h2>Make an entry</h2>
 
 <%= form_for @ex_cal do |f| %>
-<%= f.collection_select :itself, ExCal.all.sort { |x,y| y <=> x }, :id, :calories_burned %>
+<%# <%= f.select ExCal.all, :id, :calories_burned %>
+<%# <%= f.collection_select(:id, ExCal.all, :id, :calories_burned) %>
+<%# options_for_select([["Dollar", "$"], ["Kroner", "DKK"]]) %>
+<%# f.select("post", "person_id", Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+<%# (:id, ExCal.all.sort.collect {|p| p.calories_burned}, { include_blank: false }) %>
+<%# <%= f.select :ex_cals %> 
+<%# <%= f.collection_select :itself, ExCal.all.sort { |x,y| y <=> x }, :id, :calories_burned %>
 <%= f.label "Calories Burned" %><br><br>
 <%= f.text_field :calories_burned %><br><br>
 <%= f.label "Notes" %><br><br>

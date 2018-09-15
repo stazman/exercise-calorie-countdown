@@ -5,7 +5,7 @@ class ExCal < ApplicationRecord
     end
 
     def self.total_calories_burned
-        self.all.collect {|tb| tb.calories_burned}.flatten.sum
+        self.all.collect {|tb| tb.calories_burned unless tb == nil}.flatten.sum
     end
 
     def self.total_days_left
