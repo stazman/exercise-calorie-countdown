@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '>= 2.3.3'
 
+gem 'mini_racer'
+
 gem "nokogiri", ">= 1.8.5"
 gem "rack", ">= 2.0.6"
 gem "loofah", ">= 2.2.3"
